@@ -22,32 +22,33 @@
   <link rel="stylesheet" href="_astro/index%40_%40astro.DkeXIFjA.css">
   
   <style>
-    /* Scroll Header Styles */
+    /* Scroll Header Styles - Theme Colors */
     header[data-header] {
       transition: all 0.3s ease;
-      background: rgba(15, 23, 42, 0.95);
+      background: linear-gradient(135deg, rgba(59, 13, 110, 0.95) 0%, rgba(79, 20, 160, 0.95) 50%, rgba(124, 58, 237, 0.85) 100%);
       backdrop-filter: blur(10px);
       -webkit-backdrop-filter: blur(10px);
-      box-shadow: 0 4px 6px rgba(0, 0, 0, 0.3);
-      border-bottom: 1px solid rgba(255, 255, 255, 0.05);
+      box-shadow: 0 4px 20px rgba(139, 92, 246, 0.3);
+      border-bottom: 1px solid rgba(168, 85, 247, 0.2);
     }
 
-    /* Light Mode - Scrolled Header (removed - keeping dark always) */
+    /* Scrolled State - Enhanced Theme */
     header[data-header].scrolled {
-      background: rgba(15, 23, 42, 0.95);
-      backdrop-filter: blur(10px);
-      -webkit-backdrop-filter: blur(10px);
-      box-shadow: 0 4px 6px rgba(0, 0, 0, 0.3);
-      border-bottom: 1px solid rgba(255, 255, 255, 0.05);
+      background: linear-gradient(135deg, rgba(59, 13, 110, 0.98) 0%, rgba(79, 20, 160, 0.98) 50%, rgba(124, 58, 237, 0.9) 100%);
+      backdrop-filter: blur(12px);
+      -webkit-backdrop-filter: blur(12px);
+      box-shadow: 0 8px 32px rgba(139, 92, 246, 0.4);
+      border-bottom: 1px solid rgba(168, 85, 247, 0.3);
     }
 
     header[data-header] nav a {
-      color: rgba(255, 255, 255, 0.7) !important;
+      color: rgba(255, 255, 255, 0.8) !important;
       transition: color 0.3s ease;
     }
 
     header[data-header] nav a:hover {
       color: #ffffff !important;
+      text-shadow: 0 0 10px rgba(168, 85, 247, 0.5);
     }
 
     header[data-header] span.text-white {
@@ -60,7 +61,7 @@
     }
 
     header[data-header] .text-primary-200 {
-      color: #c4b5fd !important;
+      color: #ddd6fe !important;
     }
 
     header[data-header] .text-accent-300 {
@@ -68,12 +69,12 @@
     }
 
     header[data-header] #theme-toggle {
-      color: rgba(255, 255, 255, 0.5) !important;
+      color: rgba(255, 255, 255, 0.6) !important;
     }
 
     header[data-header] #theme-toggle:hover {
       color: #ffffff !important;
-      background-color: rgba(255, 255, 255, 0.1) !important;
+      background-color: rgba(168, 85, 247, 0.2) !important;
     }
 
     header[data-header] #mobile-menu-toggle {
@@ -81,25 +82,26 @@
     }
 
     header[data-header] #mobile-menu-toggle:hover {
-      background-color: rgba(255, 255, 255, 0.1) !important;
+      background-color: rgba(168, 85, 247, 0.2) !important;
     }
 
-    /* Dark Mode - Already dark by default */
+    /* Dark Mode - Theme Gradient */
     .dark header[data-header] {
-      background: rgba(15, 23, 42, 0.95);
+      background: linear-gradient(135deg, rgba(59, 13, 110, 0.95) 0%, rgba(79, 20, 160, 0.95) 50%, rgba(124, 58, 237, 0.85) 100%);
     }
 
     .dark header[data-header].scrolled {
-      background: rgba(15, 23, 42, 0.95);
-      box-shadow: 0 4px 6px rgba(0, 0, 0, 0.3);
+      background: linear-gradient(135deg, rgba(59, 13, 110, 0.98) 0%, rgba(79, 20, 160, 0.98) 50%, rgba(124, 58, 237, 0.9) 100%);
+      box-shadow: 0 8px 32px rgba(139, 92, 246, 0.4);
     }
 
     .dark header[data-header] nav a {
-      color: rgba(255, 255, 255, 0.7) !important;
+      color: rgba(255, 255, 255, 0.8) !important;
     }
 
     .dark header[data-header] nav a:hover {
       color: #ffffff !important;
+      text-shadow: 0 0 10px rgba(168, 85, 247, 0.5);
     }
 
     .dark header[data-header] span.text-white {
@@ -112,12 +114,12 @@
     }
 
     .dark header[data-header] #theme-toggle {
-      color: rgba(255, 255, 255, 0.5) !important;
+      color: rgba(255, 255, 255, 0.6) !important;
     }
 
     .dark header[data-header] #theme-toggle:hover {
       color: #ffffff !important;
-      background-color: rgba(255, 255, 255, 0.1) !important;
+      background-color: rgba(168, 85, 247, 0.2) !important;
     }
 
     .dark header[data-header] #mobile-menu-toggle {
@@ -125,19 +127,19 @@
     }
 
     .dark header[data-header] #mobile-menu-toggle:hover {
-      background-color: rgba(255, 255, 255, 0.1) !important;
+      background-color: rgba(168, 85, 247, 0.2) !important;
     }
 
     /* Smooth Transitions */
     header[data-header] {
-      will-change: background-color, backdrop-filter, box-shadow;
+      will-change: background, box-shadow;
     }
 
     header[data-header] nav a,
     header[data-header] nav span,
     header[data-header] svg,
     header[data-header] button {
-      transition: color 0.3s ease, background-color 0.3s ease;
+      transition: color 0.3s ease, background-color 0.3s ease, text-shadow 0.3s ease;
     }
 
     /* Accessibility */
