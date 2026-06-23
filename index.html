@@ -25,67 +25,6 @@
     /* Scroll Header Styles */
     header[data-header] {
       transition: all 0.3s ease;
-      background: transparent;
-    }
-
-    /* Light Mode - Scrolled Header */
-    header[data-header].scrolled {
-      background: rgba(255, 255, 255, 0.95);
-      backdrop-filter: blur(10px);
-      -webkit-backdrop-filter: blur(10px);
-      box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
-      border-bottom: 1px solid rgba(0, 0, 0, 0.05);
-    }
-
-    header[data-header].scrolled nav a {
-      color: #4b5563 !important;
-      transition: color 0.3s ease;
-    }
-
-    header[data-header].scrolled nav a:hover {
-      color: #111827 !important;
-    }
-
-    header[data-header].scrolled span.text-white {
-      color: #111827 !important;
-    }
-
-    header[data-header].scrolled svg {
-      color: #111827 !important;
-      stroke: #111827 !important;
-    }
-
-    header[data-header].scrolled .text-primary-200 {
-      color: #7c3aed !important;
-    }
-
-    header[data-header].scrolled .text-accent-300 {
-      color: #f97316 !important;
-    }
-
-    header[data-header].scrolled #theme-toggle {
-      color: #6b7280 !important;
-    }
-
-    header[data-header].scrolled #theme-toggle:hover {
-      color: #111827 !important;
-      background-color: rgba(0, 0, 0, 0.05) !important;
-    }
-
-    header[data-header].scrolled #mobile-menu-toggle {
-      color: #111827 !important;
-    }
-
-    header[data-header].scrolled #mobile-menu-toggle:hover {
-      background-color: rgba(0, 0, 0, 0.05) !important;
-    }
-
-    /* Dark Mode - Scrolled Header */
-    .dark header[data-header] {
-      background: transparent;
-    }
-
-    .dark header[data-header].scrolled {
       background: rgba(15, 23, 42, 0.95);
       backdrop-filter: blur(10px);
       -webkit-backdrop-filter: blur(10px);
@@ -93,46 +32,99 @@
       border-bottom: 1px solid rgba(255, 255, 255, 0.05);
     }
 
-    .dark header[data-header].scrolled nav a {
+    /* Light Mode - Scrolled Header (removed - keeping dark always) */
+    header[data-header].scrolled {
+      background: rgba(15, 23, 42, 0.95);
+      backdrop-filter: blur(10px);
+      -webkit-backdrop-filter: blur(10px);
+      box-shadow: 0 4px 6px rgba(0, 0, 0, 0.3);
+      border-bottom: 1px solid rgba(255, 255, 255, 0.05);
+    }
+
+    header[data-header] nav a {
       color: rgba(255, 255, 255, 0.7) !important;
       transition: color 0.3s ease;
     }
 
-    .dark header[data-header].scrolled nav a:hover {
+    header[data-header] nav a:hover {
       color: #ffffff !important;
     }
 
-    .dark header[data-header].scrolled span.text-white {
+    header[data-header] span.text-white {
       color: #ffffff !important;
     }
 
-    .dark header[data-header].scrolled svg {
+    header[data-header] svg {
       color: #ffffff !important;
       stroke: #ffffff !important;
     }
 
-    .dark header[data-header].scrolled .text-primary-200 {
+    header[data-header] .text-primary-200 {
       color: #c4b5fd !important;
     }
 
-    .dark header[data-header].scrolled .text-accent-300 {
+    header[data-header] .text-accent-300 {
       color: #fda4af !important;
     }
 
-    .dark header[data-header].scrolled #theme-toggle {
+    header[data-header] #theme-toggle {
       color: rgba(255, 255, 255, 0.5) !important;
     }
 
-    .dark header[data-header].scrolled #theme-toggle:hover {
+    header[data-header] #theme-toggle:hover {
       color: #ffffff !important;
       background-color: rgba(255, 255, 255, 0.1) !important;
     }
 
-    .dark header[data-header].scrolled #mobile-menu-toggle {
+    header[data-header] #mobile-menu-toggle {
       color: #ffffff !important;
     }
 
-    .dark header[data-header].scrolled #mobile-menu-toggle:hover {
+    header[data-header] #mobile-menu-toggle:hover {
+      background-color: rgba(255, 255, 255, 0.1) !important;
+    }
+
+    /* Dark Mode - Already dark by default */
+    .dark header[data-header] {
+      background: rgba(15, 23, 42, 0.95);
+    }
+
+    .dark header[data-header].scrolled {
+      background: rgba(15, 23, 42, 0.95);
+      box-shadow: 0 4px 6px rgba(0, 0, 0, 0.3);
+    }
+
+    .dark header[data-header] nav a {
+      color: rgba(255, 255, 255, 0.7) !important;
+    }
+
+    .dark header[data-header] nav a:hover {
+      color: #ffffff !important;
+    }
+
+    .dark header[data-header] span.text-white {
+      color: #ffffff !important;
+    }
+
+    .dark header[data-header] svg {
+      color: #ffffff !important;
+      stroke: #ffffff !important;
+    }
+
+    .dark header[data-header] #theme-toggle {
+      color: rgba(255, 255, 255, 0.5) !important;
+    }
+
+    .dark header[data-header] #theme-toggle:hover {
+      color: #ffffff !important;
+      background-color: rgba(255, 255, 255, 0.1) !important;
+    }
+
+    .dark header[data-header] #mobile-menu-toggle {
+      color: #ffffff !important;
+    }
+
+    .dark header[data-header] #mobile-menu-toggle:hover {
       background-color: rgba(255, 255, 255, 0.1) !important;
     }
 
@@ -162,12 +154,6 @@
     /* Focus States */
     header[data-header] nav a:focus-visible,
     header[data-header] button:focus-visible {
-      outline: 2px solid #8b5cf6;
-      outline-offset: 2px;
-    }
-
-    .dark header[data-header] nav a:focus-visible,
-    .dark header[data-header] button:focus-visible {
       outline: 2px solid #a78bfa;
       outline-offset: 2px;
     }
