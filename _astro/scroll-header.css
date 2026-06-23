@@ -1,0 +1,203 @@
+/* ============================================
+   SISD Conference 2026 - Scroll Header Styles
+   Astro-Compatible CSS
+   ============================================ */
+
+/* Base scroll header transition */
+header[data-header] {
+  transition: all 0.3s ease;
+  background: transparent;
+}
+
+/* ============================================
+   LIGHT MODE - Scrolled Header Styles
+   ============================================ */
+
+header[data-header].scrolled {
+  background: rgba(255, 255, 255, 0.95);
+  backdrop-filter: blur(10px);
+  -webkit-backdrop-filter: blur(10px);
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  border-bottom: 1px solid rgba(0, 0, 0, 0.05);
+}
+
+/* Light mode: Text colors */
+header[data-header].scrolled nav a {
+  color: #4b5563 !important;
+  transition: color 0.3s ease;
+}
+
+header[data-header].scrolled nav a:hover {
+  color: #111827 !important;
+}
+
+/* Light mode: Navigation brand text */
+header[data-header].scrolled span.text-white {
+  color: #111827 !important;
+}
+
+/* Light mode: SVG icons */
+header[data-header].scrolled svg {
+  color: #111827 !important;
+  stroke: #111827 !important;
+}
+
+/* Light mode: Badge text */
+header[data-header].scrolled .text-primary-200 {
+  color: #7c3aed !important;
+}
+
+header[data-header].scrolled .text-accent-300 {
+  color: #f97316 !important;
+}
+
+/* Light mode: Theme toggle button */
+header[data-header].scrolled #theme-toggle {
+  color: #6b7280 !important;
+}
+
+header[data-header].scrolled #theme-toggle:hover {
+  color: #111827 !important;
+  background-color: rgba(0, 0, 0, 0.05) !important;
+}
+
+/* Light mode: Mobile menu button */
+header[data-header].scrolled #mobile-menu-toggle {
+  color: #111827 !important;
+}
+
+header[data-header].scrolled #mobile-menu-toggle:hover {
+  background-color: rgba(0, 0, 0, 0.05) !important;
+}
+
+/* ============================================
+   DARK MODE - Scrolled Header Styles
+   ============================================ */
+
+.dark header[data-header] {
+  background: transparent;
+}
+
+.dark header[data-header].scrolled {
+  background: rgba(15, 23, 42, 0.95);
+  backdrop-filter: blur(10px);
+  -webkit-backdrop-filter: blur(10px);
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.3);
+  border-bottom: 1px solid rgba(255, 255, 255, 0.05);
+}
+
+/* Dark mode: Navigation links */
+.dark header[data-header].scrolled nav a {
+  color: rgba(255, 255, 255, 0.7) !important;
+  transition: color 0.3s ease;
+}
+
+.dark header[data-header].scrolled nav a:hover {
+  color: #ffffff !important;
+}
+
+/* Dark mode: Brand text */
+.dark header[data-header].scrolled span.text-white {
+  color: #ffffff !important;
+}
+
+/* Dark mode: SVG icons */
+.dark header[data-header].scrolled svg {
+  color: #ffffff !important;
+  stroke: #ffffff !important;
+}
+
+/* Dark mode: Badge text */
+.dark header[data-header].scrolled .text-primary-200 {
+  color: #c4b5fd !important;
+}
+
+.dark header[data-header].scrolled .text-accent-300 {
+  color: #fda4af !important;
+}
+
+/* Dark mode: Theme toggle button */
+.dark header[data-header].scrolled #theme-toggle {
+  color: rgba(255, 255, 255, 0.5) !important;
+}
+
+.dark header[data-header].scrolled #theme-toggle:hover {
+  color: #ffffff !important;
+  background-color: rgba(255, 255, 255, 0.1) !important;
+}
+
+/* Dark mode: Mobile menu button */
+.dark header[data-header].scrolled #mobile-menu-toggle {
+  color: #ffffff !important;
+}
+
+.dark header[data-header].scrolled #mobile-menu-toggle:hover {
+  background-color: rgba(255, 255, 255, 0.1) !important;
+}
+
+/* ============================================
+   SMOOTH TRANSITIONS
+   ============================================ */
+
+header[data-header] {
+  will-change: background-color, backdrop-filter, box-shadow;
+}
+
+header[data-header] nav a,
+header[data-header] nav span,
+header[data-header] svg,
+header[data-header] button {
+  transition: color 0.3s ease, background-color 0.3s ease;
+}
+
+/* ============================================
+   ACCESSIBILITY & PERFORMANCE
+   ============================================ */
+
+@media (prefers-reduced-motion: reduce) {
+  header[data-header],
+  header[data-header] nav a,
+  header[data-header] nav span,
+  header[data-header] svg,
+  header[data-header] button {
+    transition: none;
+  }
+}
+
+/* ============================================
+   HIGH DPI DISPLAYS
+   ============================================ */
+
+@media (-webkit-min-device-pixel-ratio: 2), (min-resolution: 192dpi) {
+  header[data-header].scrolled {
+    border-bottom-width: 0.5px;
+  }
+}
+
+/* ============================================
+   FOCUS STATES FOR ACCESSIBILITY
+   ============================================ */
+
+header[data-header] nav a:focus-visible,
+header[data-header] button:focus-visible {
+  outline: 2px solid #8b5cf6;
+  outline-offset: 2px;
+}
+
+.dark header[data-header] nav a:focus-visible,
+.dark header[data-header] button:focus-visible {
+  outline: 2px solid #a78bfa;
+  outline-offset: 2px;
+}
+
+/* ============================================
+   PRINT STYLES
+   ============================================ */
+
+@media print {
+  header[data-header] {
+    background: transparent;
+    box-shadow: none;
+    backdrop-filter: none;
+  }
+}
